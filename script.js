@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Add a private password lock at the very start of your DOMContentLoaded function
-const password = prompt("Enter the secret code to open your invitation... 😉");
-if (password !== "ouranniversary" && password !== "2303") { // Change "1234" to whatever password you want
-    document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; font-family:sans-serif;'>Access Denied. 🔒</h1>";
-    return;
-}
+    // 🔒 Security Password Check
+    const password = prompt("Enter the secret code to open your invitation... 😉");
+    if (password !== "ouranniversary" && password !== "2303") {
+        document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; font-family:sans-serif; color:#ff477e;'>Access Denied. 🔒</h1>";
+        return;
+    }
 
     const envelope = document.getElementById('envelope');
     const instructionText = document.getElementById('instruction-text');
@@ -35,8 +35,14 @@ if (password !== "ouranniversary" && password !== "2303") { // Change "1234" to 
         noBtn.style.transform = `translate(${x}px, ${y}px)`;
     };
 
+    // Desktop mouse hover trigger
     noBtn.addEventListener('mouseover', flyAway);
-    noBtn.addEventListener('touchstart', flyAway);
+    
+    // 📱 Phone touchscreen touch trigger (Forces the button away instantly on tap)
+    noBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // Prevents the phone screen from accidentally locking or selecting it
+        flyAway();
+    });
 
     // Quand elle clique sur "ey" (Oui)
     yesBtn.addEventListener('click', () => {

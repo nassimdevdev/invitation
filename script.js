@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Add a private password lock at the very start of your DOMContentLoaded function
+const password = prompt("Enter the secret code to open your invitation... 😉");
+if (password !== "ouranniversary" && password !== "2303") { // Change "1234" to whatever password you want
+    document.body.innerHTML = "<h1 style='text-align:center; margin-top:20vh; font-family:sans-serif;'>Access Denied. 🔒</h1>";
+    return;
+}
+
     const envelope = document.getElementById('envelope');
     const instructionText = document.getElementById('instruction-text');
     const yesBtn = document.getElementById('yes-btn');

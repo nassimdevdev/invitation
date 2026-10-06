@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A special invitation ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- L'enveloppe -->
+        <div class="envelope-wrapper" id="envelope">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="pocket"></div>
+                <!-- La lettre contenant l'invitation -->
+                <div class="letter">
+                    <div class="words">
+                        <p class="salutation">Hey Beautiful,</p>
+                        <p class="text">
+                            berjouliya lezmna nemchiw neklo 7eja ✨
+                        </p>
+                        <p class="question">temchi m3eya wala lee?</p>
+                        
+                        <!-- Boutons d'action -->
+                        <div class="btn-group">
+                            <button id="yes-btn">ey </button>
+                            <button id="no-btn">lee </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="heart" id="heart-btn"></div>
+        </div>
+        <p class="instruction" id="instruction-text">inzel 3al risela bech tra eli inv eli b3ththoulek</p>
+    </div>
+    <!-- Menu unique qui s'affiche après avoir cliqué sur "ey" -->
+        <div class="menu-card" id="menu-card" style="display: none; background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 280px; margin-top: 20px; box-sizing: border-box; text-align: center;">
+            <h2 style="color: #ff477e; margin-top: 0; font-size: 1.4rem; font-family: 'Georgia', serif;">Chnowa bech neklo? 🍽️✨</h2>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px; font-family: 'Georgia', serif;">ekhtar eli yaajbek :</p>
+            
+            <div class="menu-options" style="display: flex; flex-direction: column; gap: 12px; margin: 20px 0; text-align: left;">
+                <label class="food-option" style="background-color: #ffeef2; padding: 12px; border-radius: 12px; font-size: 1rem; display: flex; align-items: center; gap: 15px; cursor: pointer; font-family: 'Georgia', serif;">
+                    <input type="radio" name="food" value="Pizza 🍕" style="transform: scale(1.3); accent-color: #ff477e;">
+                    <span>Pizza 🍕</span>
+                </label>
+                <label class="food-option" style="background-color: #ffeef2; padding: 12px; border-radius: 12px; font-size: 1rem; display: flex; align-items: center; gap: 15px; cursor: pointer; font-family: 'Georgia', serif;">
+                    <input type="radio" name="food" value="Makloub 🌯" style="transform: scale(1.3); accent-color: #ff477e;">
+                    <span>Makloub 🌯</span>
+                </label>
+                <label class="food-option" style="background-color: #ffeef2; padding: 12px; border-radius: 12px; font-size: 1rem; display: flex; align-items: center; gap: 15px; cursor: pointer; font-family: 'Georgia', serif;">
+                    <input type="radio" name="food" value="Baguette Farcie 🥖" style="transform: scale(1.3); accent-color: #ff477e;">
+                    <span>Baguette Farcie 🥖</span>
+                </label>
+            </div>
+            
+            <button id="submit-food-btn" disabled style="background-color: #ff477e; color: white; width: 100%; padding: 10px; font-size: 1rem; border: none; border-radius: 20px; font-family: 'Georgia', serif; font-weight: bold; cursor: pointer;">C'est bon! ❤️</button>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
